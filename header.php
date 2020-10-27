@@ -14,7 +14,7 @@ namespace WP_Tailwind;
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/dps3tcd.css">
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<?php wp_head(); ?>

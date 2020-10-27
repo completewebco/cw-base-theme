@@ -8,21 +8,5 @@
 @import "whitelist/whitelist.css";
 
 
-@font-face {
-    font-family: CeraPro;
-    src: url(../fonts/CeraPro-Regular.woff2);
-    font-weight: 300;
-}
 
-@font-face {
-    font-family: CeraPro;
-    src: url(../fonts/CeraPro-Bold.woff2);
-    font-weight: 700;
-}
-
-@font-face {
-    font-family: CrimsonText;
-    src: url(../fonts/CrimsonText-SemiBold.woff2);
-    font-weight: 600;
-}
 
