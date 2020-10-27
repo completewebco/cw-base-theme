@@ -1,8 +1,8 @@
 module.exports = {
   theme: {
     fontFamily: {
-      base: ['Open Sans', 'sans-serif'],
-      heading: ['Open Sans', 'serif'],
+      base: ['proxima-nova', 'sans-serif'],
+      heading: ['bebas-neue', 'serif'],
     },
     container: {
       center: true,
