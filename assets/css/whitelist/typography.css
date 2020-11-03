@@ -1,4 +1,4 @@
-/* Font Face 
+/* Font Face */
 
 @font-face {
     font-family: CeraPro;
@@ -17,7 +17,7 @@
     src: url(../fonts/CrimsonText-SemiBold.woff2);
     font-weight: 600;
 }
-*/
+
 
 ul.text-white li a {
     @apply

@@ -1,8 +1,8 @@
 module.exports = {
   theme: {
     fontFamily: {
-      base: ['proxima-nova', 'sans-serif'],
-      heading: ['bebas-neue', 'serif'],
+      base: ['TT Norms', 'sans-serif'],
+      heading: ['bookmania', 'serif'],
     },
     container: {
       center: true,
