@@ -203,7 +203,7 @@ add_action( 'widgets_init', '_s_widgets_init' );
  */
 function _s_scripts() {
 	wp_enqueue_style( '_s-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'production', get_template_directory_uri() .'/dist/main.min.css', false);
+	wp_enqueue_style( 'production', get_template_directory_uri() .'/dist/main.css', false);
 
 	wp_enqueue_script( '_s-navigation', get_template_directory_uri() . '/dist/main.js', array(), '20151215', true );
 
