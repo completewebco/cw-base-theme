@@ -86,77 +86,63 @@ function starter_customize_register( $wp_customize )
 		'priority' => '6',
 	));
 
-	//Add Newsletter
-	$wp_customize->add_section( 'newsletter_settings', array(
-		'title' => __( 'Newsletter', 'theme_slug' ),
+	// Banner Alert
+	$wp_customize->add_section( 'alert_settings', array(
+		'title' => __( 'Header Banner Alert', 'theme_slug' ),
 		'priority' => 100,
 	));
-
-	$wp_customize->add_setting( "newsletter_title", array(
-		'type' => 'theme_mod',
-		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'wp_filter_nohtml_kses',
-	));
-	$wp_customize->add_control( "newsletter_title", array(
-		'label' => 'Newsletter Title',
-		'section' => 'newsletter_settings',
-		'type' => 'text',
-		'priority' => '5',
-	));
-	$wp_customize->add_setting( "newsletter_subtitle", array(
-		'type' => 'theme_mod',
-		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'wp_filter_nohtml_kses',
-	));
-	$wp_customize->add_control( "newsletter_subtitle", array(
-		'label' => 'Newsletter Sub Title',
-		'section' => 'newsletter_settings',
-		'type' => 'text',
-		'priority' => '5',
-	));
-
-	$wp_customize->add_setting( "background_image", array(
-		'type' => 'theme_mod',
-		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'wp_filter_nohtml_kses',
-	));
-	$wp_customize->add_control(new WP_Customize_Upload_Control( 
-		$wp_customize, 
-		'background_image', 
-		array(
-			'label'      => __( 'Background Image', 'mytheme' ),
-			'section'    => 'newsletter_settings',
-		) ) 
-	);
-
-	// Single Job Page
-	$wp_customize->add_section( 'job_settings', array(
-		'title' => __( 'Jobs Settings', 'theme_slug' ),
-		'priority' => 100,
-	));
-
-	$wp_customize->add_setting( "jobs_background_image", array(
-		'type' => 'theme_mod',
-		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'wp_filter_nohtml_kses',
-	));
-	$wp_customize->add_control(new WP_Customize_Upload_Control( 
-		$wp_customize, 
-		'jobs_background_image', 
-		array(
-			'label'      => __( 'Jobs Background Image', 'mytheme' ),
-			'section'    => 'job_settings',
-		) ) 
-	);
-	$wp_customize->add_setting( "jobs_text", array(
+	
+	$wp_customize->add_setting( "alert_text", array(
 		'type' => 'theme_mod',
 		'capability' => 'edit_theme_options',
 		'sanitize_callback' => 'wp_kses_post',
 	));
-	$wp_customize->add_control( "jobs_text", array(
-		'label' => 'Recent Positions Text',
-		'section' => 'job_settings',
+	$wp_customize->add_control( "alert_text", array(
+		'label' => 'Alert Message Text',
+		'section' => 'alert_settings',
 		'type' => 'textarea',
+		'priority' => '6',
+	));
+
+	$wp_customize->add_setting( "alert_link", array(
+		'type' => 'theme_mod',
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'wp_kses_post',
+	));
+	$wp_customize->add_control( "alert_link", array(
+		'label' => 'Alert Message Page URL',
+		'section' => 'alert_settings',
+		'type' => 'text',
+		'priority' => '6',
+	));
+
+	// Top Bar Message
+	$wp_customize->add_section( 'topbar_settings', array(
+		'title' => __( 'Top Bar Message', 'theme_slug' ),
+		'priority' => 100,
+	));
+	
+	$wp_customize->add_setting( "bar_text", array(
+		'type' => 'theme_mod',
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'wp_kses_post',
+	));
+	$wp_customize->add_control( "bar_text", array(
+		'label' => 'Top Bar Text',
+		'section' => 'topbar_settings',
+		'type' => 'textarea',
+		'priority' => '6',
+	));
+
+	$wp_customize->add_setting( "top_link", array(
+		'type' => 'theme_mod',
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'wp_kses_post',
+	));
+	$wp_customize->add_control( "top_link", array(
+		'label' => 'Top Bar Page URL Target',
+		'section' => 'topbar_settings',
+		'type' => 'text',
 		'priority' => '6',
 	));
 

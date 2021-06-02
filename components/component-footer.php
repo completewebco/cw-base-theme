@@ -1,13 +1,29 @@
-<footer id="colophon" class="footer bg-color1 text-gray-600 pt-12 pb-10 px-5 md:px-0 relative overflow-hidden">
-			<div class="flex justify-center flex-col items-center w-full">
-					<?php dynamic_sidebar( 'sidebar-1' ); ?>
-					<?php echo do_shortcode('[social-icons]'); ?>
-			</div>			
-		<div class="copyright container text-center px-12 pt-8 text-gray-100 text-sm relative z-20">
-		&copy <?php echo bloginfo(); ?> All Rights Reserved <?php echo date('Y'); ?> | <a class="underline text-gray-100 text-sm" href="/privacy-statement/">Privacy Policy</a>
-		</div>		
-			<!-- .site-info -->
-	</footer><!-- #colophon -->
+<div class="main_footer">
+  <footer id="colophon" class="bg-gray-200 text-gray-600 pt-16 pb-2 px-5 md:px-0 relative overflow-hidden">
+    <div class="container sm:flex mb-10">
+      <div class="sm:w-1/4 h-auto sm:mt-0 mt-8">
+          <?php dynamic_sidebar( 'sidebar-1' ); ?>
+       
+      </div>  
+      <div class="sm:w-1/4 h-auto sm:mt-0 mt-8">
+          <?php dynamic_sidebar( 'sidebar-2' ); ?>
+         
+      </div>
+      <div class="sm:w-1/4 h-auto sm:mt-0 mt-8">
+          <?php dynamic_sidebar( 'sidebar-3' ); ?>
+         
+      </div>
+      <div class="sm:w-1/4 h-auto sm:mt-0 mt-8">
+          <?php dynamic_sidebar( 'sidebar-4' ); ?> 
+      </div>
+    </div>
+
+    <div class="container border-t border-gray-400 pt-3 copyright text-center md: text-left md:flex">
+       <p class="md:mr-12 text-sm">&copy; <?php echo date('Y'); ?> <?php echo get_bloginfo(); ?></p> <a class="underline text-sm" href="/privacy-policy">Privacy Policy</a>
+    </div>
+   
+  </footer><!-- #colophon -->
+</div>
 </div><!-- #page -->
 
 <!-- Mobile Menu -->
